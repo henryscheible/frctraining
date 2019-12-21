@@ -8,6 +8,10 @@ jobs:
   
     steps:
     - uses: actions/checkout@v1
+    - name: Install Rust Nightly
+      run: rustup install nightly
+    - name: Set Rust Nightly to Default Toolchain
+      run: rustup default nightly
     - name: Build
       run: cargo build --verbose
     - name: Run tests
@@ -17,6 +21,10 @@ jobs:
   
     steps:
     - uses: actions/checkout@v1
+    - name: Install Rust Nightly
+      run: rustup install nightly
+    - name: Set Rust Nightly to Default Toolchain
+      run: rustup default nightly
     - name: Build
       run: cargo build --verbose
     - name: Run tests
@@ -25,6 +33,10 @@ jobs:
     runs-on: ubuntu-latest
   
     steps:
+    - name: Install Rust Nightly
+      run: rustup install nightly
+    - name: Set Rust Nightly to Default Toolchain
+      run: rustup default nightly
     - uses: actions/checkout@v1
     - name: Build
       run: cargo build --verbose
